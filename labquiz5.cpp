@@ -1,13 +1,20 @@
 //Name: Sakib Khan 
-//CSCI 135
-//Lab Quiz 5
+// CSCI 135
+//Lab Quiz 4
 
 #include <iostream>
+#include <fstream>
 using namespace std;
 
 int main()
 {
-    for (int i = 0; i < 6; i++)
-        cout << "* * * * *" << endl;
+    ifstream in_file;
+    in_file.open("data.txt");
+    string str;
+    while(!in_file.eof()){ 
+		in_file >> str; 
+		cout<< str <<endl; 
+    }
+    in_file.close();
     return 0;
 }
